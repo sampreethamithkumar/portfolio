@@ -1,0 +1,9 @@
+.center {
+  margin-top: 35%;
+}
+
+@media (max-width: 769px) {
+  .center {
+    margin-top: 0%;
+  }
+}

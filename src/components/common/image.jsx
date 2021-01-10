@@ -1,0 +1,8 @@
+import React from "react";
+import displayPic from "../../images/displayPic.jpg";
+
+const Image = () => {
+  return <img src={displayPic} alt="Image" className="image blur" />;
+};
+
+export default Image;

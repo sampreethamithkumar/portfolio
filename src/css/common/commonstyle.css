@@ -1,0 +1,28 @@
+.title_font {
+  font-style: normal;
+  font: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.text_font_heading {
+  font: bold;
+  font-family: serif;
+}
+
+.text_font {
+  font-style: italic;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+body {
+  background-color: #f4f4f4;
+}
+
+.iClass {
+  margin-left: 70%;
+}
+
+/* .url {
+  margin-left: 30%;
+  padding-top: 20%;
+} */
