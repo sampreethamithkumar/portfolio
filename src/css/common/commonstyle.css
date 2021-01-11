@@ -22,6 +22,12 @@ body {
   margin-left: 70%;
 }
 
+@media (max-width: 769px) {
+  .iClass {
+    margin: 20%;
+  }
+}
+
 /* .url {
   margin-left: 30%;
   padding-top: 20%;

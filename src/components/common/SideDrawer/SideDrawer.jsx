@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./SideDrawer.css";
 
 const SideDrawer = (props) => {
@@ -20,9 +20,6 @@ const SideDrawer = (props) => {
         </li>
         <li>
           <NavLink to="/projects">Projects</NavLink>
-        </li>
-        <li>
-          <NavLink to="/blog">Blog</NavLink>
         </li>
         <li>
           <NavLink to="/about">About</NavLink>

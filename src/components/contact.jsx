@@ -16,6 +16,8 @@ class Contact extends Form {
       message: "",
     },
     errors: {},
+    email: "sampreethamithkumar@gmail.com",
+    mailto: "mailto: sampreethamithkumar@gmail.com",
   };
 
   schema = {
@@ -28,34 +30,32 @@ class Contact extends Form {
 
   doSubmit = async () => {
     try {
-      toast("Sending Email....");
-      const response = await sendMail(this.state.data);
-      // console.log(response);
-      toast.success("Email Sent!");
-      // window.location.href = "/";
+      if (Object.keys(this.state.errors).length === 0) {
+        toast("Sending Email....");
+        await sendMail(this.state.data);
+        toast.success("Email Sent!");
+      }
     } catch (ex) {
       console.log(ex);
+      toast.error("Unexpected error occured.");
     }
   };
 
   render() {
-    const { data, errors } = this.state;
+    const { data, errors, mailto, email } = this.state;
 
     return (
       <div>
         <div className="row">
           <div className="col">
             <div className="center">
-              <h1>Contact Me</h1>
-              <p>
+              <h1 className="text_font_heading">Contact Me</h1>
+              <p style={{ fontSize: "1.2rem" }}>
                 If you want to get in touch, please enter your details or reach
                 me by email.{" "}
               </p>
-              <a
-                style={{ color: "black" }}
-                href="mailto: sampreethamithkumar@gmail.com"
-              >
-                sampreethamithkumar@gmail.com
+              <a style={{ color: "black", fontSize: "1.1rem" }} href={mailto}>
+                {email}
               </a>
             </div>
           </div>
@@ -103,6 +103,8 @@ class Contact extends Form {
                 <br />
                 <button className="btn btn-primary">Send Email</button>
               </form>
+              <br />
+              <p>* Required field.</p>
             </div>
           </div>
         </div>
