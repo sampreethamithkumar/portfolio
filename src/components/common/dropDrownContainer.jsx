@@ -16,7 +16,9 @@ class DropDownContainer extends Component {
     return (
       <div className="row div_container">
         <div className="col">
-          <h2 className="text_font_heading">{title}</h2>
+          <h2 className="text_font_heading" onClick={this.handleExpand}>
+            {title}
+          </h2>
         </div>
         <div className="col-3">
           <Arrow expand={this.state.expand} expandDiv={this.handleExpand} />
@@ -24,7 +26,11 @@ class DropDownContainer extends Component {
         <div>
           {" "}
           {subtitle && (
-            <h4 style={{ marginLeft: "10px" }} className="text_font_heading">
+            <h4
+              style={{ marginLeft: "10px" }}
+              className="text_font_heading"
+              onClick={this.handleExpand}
+            >
               {subtitle}
             </h4>
           )}
